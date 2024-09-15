@@ -22,7 +22,7 @@ const Chip = () => {
     animateWithGsap(".g_fadeIn", {
       opacity: 1,
       y: 0,
-      duration: 1,
+      duration: 2,
       ease: "power2.inOut",
     });
   }, []);
@@ -51,7 +51,7 @@ const Chip = () => {
               <img
                 src={frameImg}
                 alt="frame"
-                className="bg-transparent relative z-20"
+                className="bg-transparent relative z-20 pointer-events-none"
               />
             </div>
 
