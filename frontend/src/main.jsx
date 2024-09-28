@@ -3,9 +3,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import { BrowserRouter } from 'react-router-dom';
 
 //...
 import * as Sentry from "@sentry/react";
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css"
 
 Sentry.init({
   dsn: "https://d4ec5656e2c3f3d51a42a5ea512eb549@o4507950939373568.ingest.us.sentry.io/4507950945992704",
@@ -28,6 +31,9 @@ Sentry.init({
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+   <BrowserRouter>
+      <App />
+      <ToastContainer />
+    </BrowserRouter>
   </StrictMode>,
 )
